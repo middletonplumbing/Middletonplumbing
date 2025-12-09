@@ -1,0 +1,64 @@
+:root {
+    --red: #d60000;
+    --black: #111;
+    --light: #f4f4f4;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:var(--light);color:#222;line-height:1.5}
+
+/* Header */
+header{background:var(--black);padding:15px 20px;position:sticky;top:0;z-index:10}
+nav{display:flex;justify-content:space-between;align-items:center}
+.logo{color:var(--red);font-size:22px;font-weight:bold}
+.nav-links{display:flex;gap:15px;list-style:none}
+.nav-links a{color:white;text-decoration:none;font-size:15px}
+
+/* Mobile Nav */
+@media(max-width:700px){
+    .nav-links{display:none}
+    nav{justify-content:center}
+}
+
+/* Hero */
+.hero{
+    height:70vh;
+    background:url('https://picsum.photos/1080/1920?blur=3') center/cover no-repeat;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;color:white;position:relative;padding:20px
+}
+.hero::after{
+    content:'';position:absolute;top:0;left:0;width:100%;height:100%;
+    background:rgba(0,0,0,0.45)
+}
+.hero-content{position:relative;z-index:1;max-width:90%}
+.hero h2{font-size:32px;margin-bottom:10px}
+.hero-button{
+    background:var(--red);padding:12px 20px;border:none;color:white;
+    text-decoration:none;border-radius:6px;margin-top:15px;font-size:18px;
+    display:inline-block
+}
+
+/* Sections */
+.section{
+    padding:40px 20px;background:white;margin:15px;border-radius:10px
+}
+.services-list{list-style:none;font-size:18px;line-height:32px}
+
+/* Gallery */
+.gallery-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px
+}
+.gallery-grid img{width:100%;border-radius:8px}
+
+/* Contact Form */
+.contact-form{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.contact-form input,.contact-form textarea{
+    padding:12px;border:2px solid var(--red);border-radius:5px;font-size:16px
+}
+.contact-form button{
+    padding:12px;background:var(--black);color:white;border:none;
+    border-radius:5px;font-size:18px
+}
+
+footer{text-align:center;background:var(--black);color:white;padding:15px;margin-top:20px}
