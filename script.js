@@ -1,1 +1,1 @@
-// Placeholder for future interactivity
+// Placeholder for future interactivity (e.g., form handling)
