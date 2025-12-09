@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://middletonplumbing.github.io/middletonplumbing/sitemap.xml
